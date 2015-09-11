@@ -1,26 +1,20 @@
-var base = function(binary) {
+var wordFindReplace = function(sentence, searchWord, replaceWord) {
+	var sentenceWord = sentence;
+	var sentenceArrary = sentenceWord.split(" ");
+ 	var searchWord = searchWord;
+ 	var replaceWord = replaceWord;
+	var result = ""
 
-	var binaryArray = binary.split('').reverse();
-	var sum = 0;
-
-	binaryArray.forEach(function(currentValue, index){
-		if (currentValue == 1) {
-			sum += Math.pow(2, index);
+ 	sentenceArrary.forEach(function (itemWord){
+ 		if (itemWord == searchWord) {
+			itemWord = replaceWord;
 		}
+
 	});
-	return sum;
-};
 
-var customBase = function(binary, place) {
-	var number = base(binary);
-	return Math.pow(number, place);
-};
+	return result = sentenceArrary.join(" ")
 
-$(document).ready(function() {
-  $("form#bases").submit(function(event) {
-    var binary = $("input#base").val();
-		var baseValue = $("input#custom_base").val();
-    var result = customBase(binary, baseValue);
+}
 
 
   $(".result").text(result);
