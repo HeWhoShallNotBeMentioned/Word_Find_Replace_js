@@ -1,20 +1,10 @@
 var wordFindReplace = function(sentence, searchWord, replaceWord) {
-	// var sentence = sentence;
-	// var sentenceArray = sentence.split(" ");
+
  	var searchWord = searchWord;
  	var replaceWord = replaceWord;
 	var result = sentence.replace(searchWord, replaceWord);
 
 	return result;
- // 	sentenceArray.forEach(function (itemWord, i){
- // 		if (searchWord == itemWord) {
-	//
-	// 		sentenceArray = replaceWord;
-	// 	}
-	//
-	// });
-	//
-	// return result = sentenceArray.join(" ");
 
 };
 
